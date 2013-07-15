@@ -130,7 +130,7 @@ div.menu nav > ul > li:first-child {
 
 div.menu nav > ul > li > a {
 	display: block;
-	padding: 20px 10px 20px;
+	padding: 16px 10px 14px;
 	text-decoration	: none;
 	text-transform	: uppercase;
 	font-family		: 'PT Sans Narrow', 'Helvetica Neue', Arial, sans-serif;
@@ -149,12 +149,14 @@ div.menu nav > ul > li:hover {
 }
 
 div.menu nav ul li span {
-	display	: block;
-	font 	: italic 10px 'PT Sans', 'Helvetica Neue', 'Verdana', sans-serif;
-	text-transform	: lowercase;
-	margin-top		: 11px;
-	margin-left		: 2px;
+	display: block;
+	font: italic 10px 'PT Sans', 'Helvetica Neue', 'Verdana', sans-serif;
+	text-transform: lowercase;
+	margin-top: 0px;
+	margin-left: 12px;
+	margin-bottom: 5px;
 	color: #555;
+	cursor: pointer;
 }
 
 div.menu li ul {
