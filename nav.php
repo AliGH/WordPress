@@ -13,13 +13,13 @@
         <?php
           wp_nav_menu(array(
             'theme_location'  => 'mainmenu',
-            'container'       => 'div', 
-            'container_class' => '', 
-            'menu_class'      => '', 
-            'before'          => '',
-            'after'           => '',
-            'link_before'     => '',
-            'link_after'      => ''
+            'container'       => 'false', 
+            'container_class' => ''
+           // 'menu_class'      => '', 
+           // 'before'          => '',
+           // 'after'           => '',
+           // 'link_before'     => '',
+           // 'link_after'      => ''
           ));
         ?>
       </nav>
