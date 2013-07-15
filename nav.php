@@ -8,7 +8,23 @@
           </a>
         </h1> 
       </div>
-      <nav >
+
+      <nav>
+        <?php
+          wp_nav_menu(array(
+            'theme_location'  => 'mainmenu',
+            'container'       => 'div', 
+            'container_class' => '', 
+            'menu_class'      => '', 
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => ''
+          ));
+        ?>
+      </nav>
+
+      <!-- <nav >
         <menu>
           <li>
             <a href="index.html" style="color: #fff;">
@@ -139,7 +155,7 @@
             </a>
           </li>
         </menu> 
-      </nav>
+      </nav> -->
     </div>
     <div class="hide">
       <a id='hideupdn' href="#">
