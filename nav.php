@@ -14,10 +14,10 @@
           wp_nav_menu(array(
             'theme_location'  => 'mainmenu',
             'container'       => 'false', 
-            'container_class' => ''
+            'container_class' => '',
            // 'menu_class'      => '', 
            // 'before'          => '',
-           // 'after'           => '',
+            'after'           => '<span>describe the page</span>'
            // 'link_before'     => '',
            // 'link_after'      => ''
           ));
