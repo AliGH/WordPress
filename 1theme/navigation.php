@@ -13,14 +13,25 @@
 			<!-- NAVIGATION
 			================================================== -->
 			<!-- Navigation begins here -->
-			
+			<?php
+          wp_nav_menu(array(
+            'theme_location'  => 'mainmenu',
+            'container'       => 'div', 
+            'container_class' => 'collapse',
+            'container_id'    => 'nav-collapse',
+            'menu_class'      => 'nav', 
+           // 'before'          => '',
+           // 'after'           => '<span>describe the page</span>'
+           // 'link_before'     => '',
+           // 'link_after'      => ''
+          ));
+        ?>
+        <!-- 
 			<div id="nav-collapse" class="collapse">
 				<ul class="nav">
 				
-					<!-- Slap your logo here -->
 					<li class="logo"><a>یک تجربه</a></li>
 					
-					<!-- portfolio (drop down) -->
 					<li>
 						<a href="#filter=.portfolio" class="selected"><span data-toggle="collapse" data-target="#portfolio-collapse"></span>نمونه کارها</a>
 						<ul id="portfolio-collapse" class="collapse out">
@@ -30,20 +41,16 @@
 						</ul>
 					</li>
 					
-					<!-- blog -->
 					<li><a href="#filter=.blog">بلاگ</a></li>
 					
-					<!-- grid widgets -->
 					<li>
 						<a href="#filter=.grid-widget">ویدجت</a>
 					</li>
 					
-					<!-- elements
 					<li>
 						<a href="#filter=.shortcodes">المنت ها</a>
-					</li> -->
+					</li>
 					
-					<!-- pages (drop down) -->
 					<li>
 						<a><span data-toggle="collapse" data-target="#pages-collapse"></span>صفحات</a>
 						<ul id="pages-collapse" class="collapse out">
@@ -54,7 +61,7 @@
 					</li>
 					
 				</ul>
-			</div>
+			</div> -->
 		</nav>	 
 		<div class="nav-arrow">
 		</div>
