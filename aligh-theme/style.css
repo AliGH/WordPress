@@ -1,0 +1,93 @@
+/*
+Theme Name: AWESOMEST
+Theme URI: http://themeforest.net/AWESOMEST/12324
+Author: Ali aGHasizadeh
+Author URI: http://aligh.pro
+Description: Wordpress Theme for W4 Class.
+Version: 0.1
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #7F8C8D;
+  font-family: droidnaskh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 950px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.nav {
+  list-style-type: none;
+  background-color: #34495E;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.nav:after {
+  clear: both;
+  display: block;
+  content: " ";
+}
+.nav li {
+  float: right;
+}
+.nav li:first-child {
+  margin-right: 0;
+}
+
+.nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-transition: all 400ms;
+     -moz-transition: all 400ms;
+      -ms-transition: all 400ms;
+       -o-transition: all 400ms;
+          transition: all 400ms;
+}
+
+.nav li:hover a {
+  background-color: #1abc9c;
+}
+.nav li.current_page_item a{
+  background-color: #1abc9c;
+  
+}
+.content {
+  margin-top: 30px;
+  line-height: 26px;
+}
+
+.content .title-link {
+  float: right;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #2980B9;
+}
+.content .title-link:visited {
+  color: #2980B9;
+}
+.clearfix{
+  clear: both;
+  width: 0;
+  height: 0;
+}
+.footer {
+  margin-top: 50px;
+}
+.footer a {
+  color: #34495E;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
