@@ -35,7 +35,7 @@
               <!-- Portfolio Description -->
               <p>
                 <?php the_excerpt() ?>
-                <?php // wp_list_categories(); ?> 
+                <?php the_category(); ?> 
               </p>
             
             <div class="entry-footer">
