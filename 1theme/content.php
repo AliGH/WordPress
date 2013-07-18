@@ -10,6 +10,7 @@
         
           <!-- Portfolio Image -->
           <?php if (has_post_thumbnail()) { ?>
+
             <div class="entry-image">
               <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" class="fancybox">
                 <span class="entry-image-overlay"></span>
@@ -34,6 +35,7 @@
               <!-- Portfolio Description -->
               <p>
                 <?php the_excerpt() ?>
+                <?php // wp_list_categories(); ?> 
               </p>
             
             <div class="entry-footer">
