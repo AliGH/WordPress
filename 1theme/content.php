@@ -2,7 +2,7 @@
   <div id="container">
   <?php 
       $args = array(
-        'post_type' => 'page',
+        'post_type' => 'post',
         'nopaging' => 'true',
         'orderby' => 'name',
         'order' => 'ASC',
@@ -13,15 +13,10 @@
       if($query->have_posts()){
         while($query->have_posts()){
           $query->the_post();
-          echo '<h1>'.get_the_title().'</h1>';
-          the_content();
-        }
-      }
+          
+        
     ?>
-    <?php
-      while (have_posts()) {
-      the_post()
-    ?> 
+
     <div class="widget portfolio graphics homepage">
         <div class="entry-container span4">
         
@@ -45,7 +40,7 @@
               <!-- Portfolio Heading -->
               <h5 class="heading">
                 <a href="portfolio-single.html">              
-                  <?php the_title() ?>
+                  <?php echo '<h1>'.get_the_title().'</h1>'; ?>
                 </a>
               </h5>
               
@@ -69,6 +64,7 @@
       </div>
     <?php
       } 
+    }
     ?>
   </div>
 </div>
