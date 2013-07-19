@@ -3,18 +3,17 @@
   <?php 
       $args = array(
         'post_type' => 'post',
-        'nopaging' => 'true',
-        'orderby' => 'name',
+        'posts_per_page' => '6',
+        'orderby' => 'modified',
         'order' => 'ASC',
+        'author_name' => 'AliGH',
       );
 
-      $query = new WP_Query($args);
+    $query = new WP_Query($args);
 
-      if($query->have_posts()){
-        while($query->have_posts()){
-          $query->the_post();
-          
-        
+    if($query->have_posts()){
+      while($query->have_posts()){
+        $query->the_post();
     ?>
 
     <div class="widget portfolio graphics homepage">
@@ -26,7 +25,7 @@
             <div class="entry-image">
               <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" class="fancybox">
                 <span class="entry-image-overlay"></span>
-                <?php the_post_thumbnail() ?>
+                <?php the_post_thumbnail(); ?>
               </a>
             </div>
           <?php
@@ -40,14 +39,15 @@
               <!-- Portfolio Heading -->
               <h5 class="heading">
                 <a href="portfolio-single.html">              
-                  <?php echo '<h1>'.get_the_title().'</h1>'; ?>
+                  <?php echo '<h3>'.get_the_title().'</h3>'; ?>
                 </a>
               </h5>
               
               <!-- Portfolio Description -->
               <p>
-                <?php the_excerpt() ?>
-                <?php the_category(); ?> 
+                <?php the_excerpt(); ?>
+                <?php the_author(); ?>
+                <?php the_tags(); ?>
               </p>
             
             <div class="entry-footer">
