@@ -13,10 +13,18 @@
 
     if($query->have_posts()){
       while($query->have_posts()){
+        
         $query->the_post();
+
+        $cats = get_the_category();
+        $class_name = "portfolio";
+        foreach($cats as $cat) {
+          $class_name  .= " " . $cat->slug;
+        }
+
     ?>
 
-    <div class="widget portfolio graphics homepage">
+    <div class="widget <?php echo $class_name; ?> graphics homepage">
         <div class="entry-container span4">
         
           <!-- Portfolio Image -->
