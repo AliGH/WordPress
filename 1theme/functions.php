@@ -46,10 +46,11 @@ function custome_theme_init (){
     'type',
     'product',
     array(
-      'label' => _x( 'Jafang',"Product taxonomy"),
       'rewrite' => array( 'slug' => 'type' ),
       'hierarchical' => true,
       'labels' => array(
+        'name' => __('JAFANG'),
+        'menu_name' => __('Types'),
         'add_new_item' => __('Add new JAFANG')
       )
     )
