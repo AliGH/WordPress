@@ -41,15 +41,19 @@ function custome_theme_init (){
   );
 
   register_post_type ('product',$args);
-  register_taxonomy_for_object_type('category', 'product');
+  //register_taxonomy_for_object_type('category', 'product');
   register_taxonomy(
-  'type',
-  'product',
-  array(
-    'label' => _x( 'Type',"Product taxonomy"),
-    'rewrite' => array( 'slug' => 'type' )
-  )
-);
+    'type',
+    'product',
+    array(
+      'label' => _x( 'Jafang',"Product taxonomy"),
+      'rewrite' => array( 'slug' => 'type' ),
+      'hierarchical' => true,
+      'labels' => array(
+        'add_new_item' => __('Add new JAFANG')
+      )
+    )
+  );
 }
 
 
