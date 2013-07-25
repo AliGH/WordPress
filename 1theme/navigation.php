@@ -3,13 +3,23 @@
 <!-- This is the logo and navigation -->
 <?php
 
-  $all_categories = get_categories( $args );
+  // $all_categories = get_categories( $args );
+  // $args = array(
+  //   'type' => 'post',
+  //   'orderby' => 'name',
+  //   'order' => 'ASC',
+  //   'hide_empty' => True
+  // );
+
+  $taxonomies = array('type');
+
   $args = array(
-    'type' => 'post',
     'orderby' => 'name',
     'order' => 'ASC',
     'hide_empty' => True
   );
+
+  $all_types = get_terms( $taxonomies, $args );
 ?>
 
 	<div class="navigation">
@@ -44,13 +54,11 @@
 					<li>
 						<a href="#filter=.portfolio" class="selected"><span data-toggle="collapse" data-target="#portfolio-collapse"></span>نمونه کارها</a>
 						<ul id="portfolio-collapse" class="collapse out">
-              <?php
-                foreach($all_categories as $category) {
-              ?>
-                  <li><a href="#filter=.<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>
-              <?php
-               } 
-              ?>
+              <?php 
+                foreach($all_types as $type) {
+                  echo "<li><a href='#filter=.GH_$type->slug'> $type->name </a></li>";
+                } 
+               ?>
 							<!-- <li><a href="#filter=.graphics">گرافیک</a></li>
 							<li><a href="#filter=.illustration">وب سایت</a></li>
 							<li><a href="#filter=.web">موبایل</a></li> -->
