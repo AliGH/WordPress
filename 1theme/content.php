@@ -2,7 +2,7 @@
   <div id="container">
   <?php 
       $args = array(
-        'post_type' => 'post',
+        'post_type' => 'product',
         'posts_per_page' => '6',
         'orderby' => 'modified',
         'order' => 'ASC',
