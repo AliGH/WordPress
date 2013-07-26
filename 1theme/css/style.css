@@ -475,6 +475,7 @@ nav .nav ul ul {
 }
 .entry-image img {
 	width: 100%;
+	height: 100%;
 	margin-bottom: -6px;
 }
 .widget:hover .entry-image-overlay {
