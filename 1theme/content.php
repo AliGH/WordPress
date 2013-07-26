@@ -56,7 +56,7 @@
             
               <!-- Portfolio Heading -->
               <h5 class="heading">
-                <a href="portfolio-single.html">              
+                <a href="<?php the_permalink(); ?>">
                   <?php echo '<h3>'.get_the_title().'</h3>'; ?>
                 </a>
               </h5>
