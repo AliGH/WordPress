@@ -63,7 +63,7 @@
               
               <!-- Portfolio Description -->
               <p>
-                <?php the_content(); ?>
+                <?php the_excerpt(); ?>
                 <?php the_author(); ?>
                 <?php the_tags(); ?>
               </p>
