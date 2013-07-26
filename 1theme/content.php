@@ -3,10 +3,10 @@
   <?php 
       $args = array(
         'post_type' => 'product',
-        'posts_per_page' => '6',
+        'posts_per_page' => '10',
         'orderby' => 'modified',
         'order' => 'ASC',
-        'author_name' => 'AliGH',
+      // 'author_name' => 'AliGH',
       );
 
     $query = new WP_Query($args);
@@ -16,10 +16,20 @@
         
         $query->the_post();
 
-        $cats = get_the_category();
+        // $cats = get_the_category();
+        // $class_name = "portfolio";
+        // foreach($cats as $cat) {
+        //   $class_name  .= " " . $cat->slug;
+        // }
+
         $class_name = "portfolio";
-        foreach($cats as $cat) {
-          $class_name  .= " " . $cat->slug;
+
+        $types = get_the_terms($post->ID,'type');
+
+        if($types){
+          foreach($types as $type){
+            $class_name  .= " GH_" . $type->slug;
+          }
         }
 
     ?>
