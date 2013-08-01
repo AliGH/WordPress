@@ -37,7 +37,7 @@ function custome_theme_init (){
     'hierarchical' => false,
     'menu_position' => 20,
     'menu_icon' => get_bloginfo('template_url') . '/images/no.png', // 16x16
-    'supports' => array('title','editor','thumbnail','excerpt')
+    'supports' => array('title','editor','thumbnail','excerpt','custom-fields')
   );
 
   register_post_type ('product',$args);
