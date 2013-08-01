@@ -15,7 +15,9 @@
       while($query->have_posts()){
         
         $query->the_post();
-
+        $meta = get_post_custom();
+        $price = count($meta['price'])>0 ? $meta['price'][0] : 0;
+        $seil = count($meta['seil'])>0 ? $meta['seil'][0] : 0;
         // $cats = get_the_category();
         // $class_name = "portfolio";
         // foreach($cats as $cat) {
@@ -63,9 +65,13 @@
               
               <!-- Portfolio Description -->
               <p>
-                <?php the_excerpt(); ?>
-                <?php the_author(); ?>
-                <?php the_tags(); ?>
+                <?php 
+                  the_excerpt();
+                  //the_author();
+                  //the_tags(); 
+                  echo "<del>$price</del><ins>$seil</ins>";
+                 ?>
+
               </p>
             
             <div class="entry-footer">
