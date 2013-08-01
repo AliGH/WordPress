@@ -16,8 +16,8 @@
         
         $query->the_post();
         $meta = get_post_custom();
-        $price = count($meta['price'])>0 ? $meta['price'][0] : 0;
-        $seil = count($meta['seil'])>0 ? $meta['seil'][0] : 0;
+        $price = count($meta['product_price'])>0 ? $meta['product_price'][0] : 0;
+        $sail = count($meta['product_sail'])>0 ? $meta['sail'][0] : 0;
         // $cats = get_the_category();
         // $class_name = "portfolio";
         // foreach($cats as $cat) {
@@ -69,7 +69,7 @@
                   the_excerpt();
                   //the_author();
                   //the_tags(); 
-                  echo "<p><del>$price</del> <ins>$seil</ins> تومان</p>";
+                  echo "<p><del>$price</del> <ins>$sail</ins> تومان</p>";
                  ?>
 
               </p>
