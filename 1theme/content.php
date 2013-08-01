@@ -69,7 +69,7 @@
                   the_excerpt();
                   //the_author();
                   //the_tags(); 
-                  echo "<del>$price</del><ins>$seil</ins>";
+                  echo "<p><del>$price</del> <ins>$seil</ins> تومان</p>";
                  ?>
 
               </p>
