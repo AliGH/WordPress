@@ -55,6 +55,11 @@ function custome_theme_init (){
       )
     )
   );
+add_shortcode('contact_form','contact_form');
+}
+
+function contact_form(){
+  return file_get_contents( get_template_directory() . '/contact_form.html');
 }
 
 // add_shortcode('hello','say_hello');
@@ -63,14 +68,14 @@ function custome_theme_init (){
 //   return '<h1 style="color:red;text-align:center;">Hello</h1>';
 // }
 
-add_shortcode('hello','say_hello');
+// add_shortcode('hello','say_hello');
 
-function say_hello($atts){
-  extract( shortcode_atts( array(
-    'name' => 'ali'
-  ), $atts ) );
-  return "<h1 style=\"color:red;text-align:center;\">Hello $name</h1>";
-}
+// function say_hello($atts){
+//   extract( shortcode_atts( array(
+//     'name' => 'ali'
+//   ), $atts ) );
+//   return "<h1 style=\"color:red;text-align:center;\">Hello $name</h1>";
+// }
 
 
 add_action('init', 'custome_theme_init');
